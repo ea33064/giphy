@@ -28,12 +28,9 @@
       const apikey = 'gDB5BBjDNKB7SiV4rxlWM2ZBbTQ3lmjw'
       const path = 'https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${q}'
 
-      const p = fetch(path) //promise 1
-      const p2 = p.then(function(res) { //promise 2
+      fetch(path).then(function(res) { 
         return res.json() 
-      })
-
-      p2.then(function(json) {
+      }).then(function(json) {
         connsole.log(json)
       })
 
