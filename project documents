@@ -1,0 +1,55 @@
+Project Documentation: Giphy Project
+
+Installation Instructions:
+
+Clone the Repository:
+
+Open your terminal or command prompt.
+Navigate to the directory where you want to store the project.
+Run the following command to clone the repository:
+git clone <repository-url>
+Replace <repository-url> with the URL of the GitHub repository.
+Navigate to Project Directory:
+
+Once the repository is cloned, navigate to the project directory using the cd command:
+cd giphy-project
+Install Dependencies:
+
+Before running the project, install the necessary dependencies. This project uses HTML, CSS, and JavaScript, so there are no additional dependencies to install.
+Execution Instructions:
+
+Open HTML File:
+
+After navigating to the project directory, open the index.html file in your preferred web browser.
+Search for GIFs:
+
+In the search input field at the top of the page, enter a keyword or phrase to search for GIFs.
+Press the "Search" button or hit Enter to initiate the search.
+View Search Results:
+
+The GIFs matching your search query will be displayed in the results section below the search bar.
+Interact with GIFs:
+
+Scroll through the GIFs to view the search results.
+Click on any GIF to view it in full size or interact with it as needed.
+
+Repeat Search:
+
+To perform another search, simply enter a new keyword or phrase in the search input field and repeat the process.
+
+Additional Notes:
+
+This project utilizes the Giphy API to fetch GIFs based on user search queries. An API key is required to access the Giphy API, and it's already included in the JavaScript
+code (const apikey = 'gDB5BBjDNKB7SiV4rxlWM2ZBbTQ3lmjw'). If you encounter any issues during installation or execution, please refer to the troubleshooting section of this
+documentation or reach out to the project maintainers for assistance.
+
+Troubleshooting:
+
+If the GIFs are not loading or the search functionality is not working, ensure that you have a stable internet connection and that the Giphy API key is correctly configured
+in the JavaScript code. Double-check that the file paths in the HTML file (index.html) and CSS file (styles.css) are correctly referencing the respective files in your project
+directory.
+
+Feedback and Support:
+
+If you have any feedback, suggestions for improvement, or encounter any issues while using the Giphy Project, please don't hesitate to reach out to me via GitHub or email.
+Your feedback is highly appreciated and will help improve the project for all users.
