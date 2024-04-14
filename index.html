@@ -32,6 +32,8 @@
         return res.json() 
       }).then(function(json) {
         connsole.log(json)
+      }).catch(function(err) {
+        console.log(err.message)
       })
 
     </script>
