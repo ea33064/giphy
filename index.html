@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>This is a simple HTML + CSS template!</h1>
+    <h1>Gif E</h1>
     <div class="container">
       <header>
         <form id="search-form">
-          <input type="text" placeholder="search" />
+          <input id="search-input" type="text" placeholder="search" />
           <button type="submit">Search</button>
         </form>
       </header>
@@ -24,20 +24,30 @@
     <!-- Script -->
     <script>
 
+      const searchForm = document.getElementById('search-form')
+      const searchInput = document.getElementById('search-input')
+      const resultsEl = document.getElementById('results')
+
+      searchForm.addEventListener('submit', function(e) {
+        e.preventDefault()
+        const q = searchInput.value
+        search(q)
+
+      })
 
 
 
 
-      //
-      const q = 'cats'
+      function search(q) {
+        
       const apikey = 'gDB5BBjDNKB7SiV4rxlWM2ZBbTQ3lmjw'
-      const path = 'https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${q}'
+      const path = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${q}`
 
       fetch(path).then(function(res) { 
         return res.json() 
       }).then(function(json) {
-        connsole.log(json.data[0].images.fixed_width.url)
-        const resultsEl = document.getElementById('results')
+        console.log(json.data[0].images.fixed_width.url)
+        
         let resultsHTML = ''
 
         json.data.forEach(function(obj) {
@@ -56,10 +66,14 @@
             >`
         })
 
-        resultsEl.innerHTML =
+        resultsEl.innerHTML = resultsHTML;
       }).catch(function(err) {
         console.log(err.message)
       })
+
+      }
+      
+     
 
     </script>
   </body>
