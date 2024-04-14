@@ -11,7 +11,7 @@
     <h1>This is a simple HTML + CSS template!</h1>
     <div class="container">
       <header>
-        <form>
+        <form id="search-form">
           <input type="text" placeholder="search" />
           <button type="submit">Search</button>
         </form>
@@ -23,6 +23,11 @@
     </div>
     <!-- Script -->
     <script>
+
+
+
+
+
       //
       const q = 'cats'
       const apikey = 'gDB5BBjDNKB7SiV4rxlWM2ZBbTQ3lmjw'
@@ -32,9 +37,26 @@
         return res.json() 
       }).then(function(json) {
         connsole.log(json.data[0].images.fixed_width.url)
+        const resultsEl = document.getElementById('results')
+        let resultsHTML = ''
+
         json.data.forEach(function(obj) {
-          console.log(obj.images.fixed_width.url)
+          console.log(obj)
+
+          const url = obj.images.fixed_width.url
+          const width = obj.images.fixed_width.width
+          const height = obj.images.fixed_width.height
+          const title = obj.title
+
+          resultsHTML += `<img
+            src="${url}"
+            width="${width}"
+            height="${height}"
+            alt="${title}"
+            >`
         })
+
+        resultsEl.innerHTML =
       }).catch(function(err) {
         console.log(err.message)
       })
